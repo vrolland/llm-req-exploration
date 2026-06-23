@@ -1,0 +1,100 @@
+# Request Network Docs
+
+> Protocol for accepting and sending crypto payments at scale across EVM and Tron — instant payment reconciliation, click-to-pay payment links, cross-chain routing, and programmatic payouts. Available via a Dashboard (no-code), hosted Secure Payment pages, and a REST API.
+
+## Get Started
+
+- [Quickstart](https://docs.request.network/use-cases/quickstart.md): End-to-end walkthrough — sign in to the Dashboard, create a payment destination, register a webhook, and create a hosted payment link.
+- [Getting Started](https://docs.request.network/api-setup/getting-started.md): Quick setup guide to get your API keys and start building with Request Network
+- [Integration Tutorial](https://docs.request.network/api-setup/integration-tutorial.md): Complete step-by-step guide to integrate Request Network API with a Node.js backend and React frontend
+- [Welcome / Overview](https://docs.request.network/use-cases/welcome.md): Request Network protocol allows you to be paid and pay at scale without intermediaries across EVM and Tron. Instant payment reconciliation, click-to-pay payment links, and cross-chain routing for Web3 payments.
+
+## Use Cases
+
+- [No-code payment links](https://docs.request.network/use-cases/no-code-payment-links.md): Generate payment links from the Dashboard UI — no API integration required. Best for freelancers, SMBs, and ops teams.
+- [Programmatic payment links](https://docs.request.network/use-cases/programmatic-payment-links.md): Generate Secure Payment links on demand from your backend. Best for e-commerce, marketplaces, SaaS, and any app that bills programmatically.
+- [Multi-chain checkout](https://docs.request.network/use-cases/multi-chain-checkout.md): Let payers pay from any chain and any token. Receive on your preferred chain. Cross-chain swaps are routed through Li.Fi.
+- [Batch payouts (EVM)](https://docs.request.network/use-cases/batch-payouts.md): Pay many recipients in one signed transaction. Marketplaces paying vendors, agencies paying contractors, refund campaigns, payroll-adjacent flows.
+- [Webhook reconciliation](https://docs.request.network/use-cases/webhook-reconciliation.md): Real-time payment notifications wired into your accounting, fulfillment, and order systems. The reliable way to detect payments without polling.
+- [Compliance-gated payments (KYT)](https://docs.request.network/use-cases/compliance-gated-payments.md): Screen every payer wallet for sanctions and risk before accepting a payment. Built into payment destinations — opt-in per receiving route.
+
+## API Features
+
+- [Payment Types Overview](https://docs.request.network/api-features/payment-types-overview.md): Choose the right Request Network payment type for your integration
+- [Create Requests](https://docs.request.network/api-features/create-requests.md): Request creation workflows and configuration for invoices and payment collection
+- [Standard Native & ERC20 Payments](https://docs.request.network/api-features/standard-payments.md): Simple crypto-to-crypto payments using native currencies and ERC20 tokens
+- [Conversion Payments](https://docs.request.network/api-features/conversion-payments.md): Requests denominated in one currency and settled in another with conversion at payment time
+- [Crosschain Payments](https://docs.request.network/api-features/crosschain-payments.md): Multi-network payment routing with automatic bridging via LiFi
+- [Crypto-to-fiat Payments](https://docs.request.network/api-features/crypto-to-fiat-payments.md): Pay requests in crypto while payees receive fiat in bank accounts
+- [Batch Payments](https://docs.request.network/api-features/batch-payments.md): Process multiple payments in a single transaction for gas optimization
+- [Partial Payments](https://docs.request.network/api-features/partial-payments.md): Split payments across multiple transactions and funding sources
+- [Recurring Payments](https://docs.request.network/api-features/recurring-payments.md): Automated payment schedules for subscriptions and recurring billing
+- [Payouts](https://docs.request.network/api-features/payouts.md): Initiate single, batch, and recurring payments directly via the API
+- [Commerce Payments (Preview)](https://docs.request.network/api-features/commerce-payments.md): Authorize-capture-void escrow payment flow for e-commerce platforms
+- [Payee Destinations](https://docs.request.network/api-features/payee-destinations.md): Register and manage receiving routes using ERC-7828 interop addresses
+- [Payment Detection](https://docs.request.network/api-features/payment-detection.md): Automatic reference-based payment detection system for blockchain transactions
+- [Query Requests](https://docs.request.network/api-features/query-requests.md): Request status monitoring, lifecycle management, and information retrieval
+- [Query Payments](https://docs.request.network/api-features/query-payments.md): Advanced payment search and filtering with the GET /v2/payments endpoint
+- [Webhooks & Events](https://docs.request.network/api-features/webhooks-events.md): Real-time notifications for payment lifecycle events and request status changes
+- [Client ID Management](https://docs.request.network/api-features/client-id-management.md): Create and manage Client IDs for frontend authentication, domain whitelisting, and orchestrator flows
+- [Secure Payment Pages](https://docs.request.network/api-features/secure-payment-pages.md): Create hosted secure payment links and let payers complete payments from a dedicated secure flow.
+- [Secure Payment Integration Guide](https://docs.request.network/api-features/secure-payment-integration-guide.md): Integrate a secure payment experience via a secured link (redirect)
+- [Secure Payment Supported Networks and Currencies](https://docs.request.network/api-features/secure-payment-supported-networks-and-currencies.md): Chain and currency coverage for Secure Payment Pages.
+- [Platform Fees](https://docs.request.network/api-features/platform-fees.md): Configure platform fees with feePercentage and feeAddress
+- [Protocol Fees](https://docs.request.network/api-features/protocol-fees.md): Protocol fee model applied by Request Network API payments
+- [Fee Breakdowns](https://docs.request.network/api-features/fee-breakdowns.md): Where to read fee details in routes, payment search, and status responses
+
+## API Reference
+
+- [Authentication](https://docs.request.network/api-reference/authentication.md): How to authenticate Request Network API calls with API keys or Client ID
+- [Wallet Authentication (SIWE)](https://docs.request.network/api-reference/wallet-authentication.md): Sign-In with Ethereum and Tron wallet authentication for session-based API access
+- [Endpoints Overview](https://docs.request.network/api-reference/endpoints-overview.md): Quick index of v2 endpoint groups
+- [Create a new request](https://docs.request.network/api-reference/request/create-a-new-request.md): Create a new payment request
+- [Get payment routes](https://docs.request.network/api-reference/request/get-payment-routes.md): Get available payment routes for a request. Analyzes the payer's wallet balance across supported chains and returns possible payment methods, including direct same-chain payments and crosschain bridging options.
+- [Get payment calldata](https://docs.request.network/api-reference/request/get-payment-calldata.md): Get the calldata needed to pay a request. Same-chain payments return executable transaction calldata; crosschain payments return a payment intent to be signed and processed.
+- [Get request status](https://docs.request.network/api-reference/request/get-request-status.md): Get the status of a payment request
+- [Send a payment intent](https://docs.request.network/api-reference/request/send-a-payment-intent.md): Send a payment intent
+- [Update a recurring request](https://docs.request.network/api-reference/request/update-a-recurring-request.md): Update a recurring request
+- [Initiate a payment](https://docs.request.network/api-reference/pay/initiate-a-payment.md): Initiate a payment without creating a request first. Supports one-time and recurring payments; recurring payments use a recurrence object (start date, frequency, total executions, payer address).
+- [Pay multiple requests in one transaction](https://docs.request.network/api-reference/pay/pay-multiple-requests-in-one-transaction.md): Pays multiple payment requests in one transaction by creating new requests or using existing request IDs. All requests must be on the same network. Supports mixed ERC20, Native, and conversion requests.
+- [Submit a recurring payment signature](https://docs.request.network/api-reference/pay/submit-a-recurring-payment-signature.md): Submit a signature for a recurring payment permit to activate the schedule, after creating the recurring payment and obtaining permit data.
+- [Update a recurring payment](https://docs.request.network/api-reference/pay/update-a-recurring-payment.md): Update a recurring payment by cancelling it (optionally returning a transaction to decrease allowance) or unpausing it to resume execution.
+- [Get the status of a recurring payment](https://docs.request.network/api-reference/pay/get-the-status-of-a-recurring-payment.md): Retrieve current status and execution details of a recurring payment — executed payments, remaining executions, next payment date, and overall status.
+- [Get EIP-712 signing data with nonce](https://docs.request.network/api-reference/v2payee-destination/get-eip-712-signing-data-with-nonce.md): Generate a nonce and return the complete EIP-712 signing data structure for payee destination creation or deactivation
+- [Create payee destination](https://docs.request.network/api-reference/v2payee-destination/create-payee-destination.md): Create a payee destination with EIP-712 signature verification
+- [Get payee destination by ID](https://docs.request.network/api-reference/v2payee-destination/get-payee-destination-by-id.md): Retrieve a payee destination using the format network:walletAddress:tokenAddress
+- [Get active payee destination for wallet](https://docs.request.network/api-reference/v2payee-destination/get-active-payee-destination-for-wallet.md): Retrieve the active payee destination for a specific wallet address. Returns null if no active destination exists.
+- [Deactivate payee destination](https://docs.request.network/api-reference/v2payee-destination/deactivate-payee-destination.md): Deactivate a payee destination with EIP-712 signature verification. Sets active=false without deleting the record.
+- [Create a new client ID](https://docs.request.network/api-reference/client-ids/create-a-new-client-id.md): Create a new client ID for frontend applications with domain restrictions
+- [Get a specific client ID](https://docs.request.network/api-reference/client-ids/get-a-specific-client-id.md): Get details of a specific client ID
+- [List all client IDs](https://docs.request.network/api-reference/client-ids/list-all-client-ids.md): Get all client IDs for the authenticated platform
+- [Update a client ID](https://docs.request.network/api-reference/client-ids/update-a-client-id.md): Update client ID settings including domains and rate limits
+- [Revoke a client ID](https://docs.request.network/api-reference/client-ids/revoke-a-client-id.md): Revoke a client ID (cannot be reactivated)
+- [Get currencies](https://docs.request.network/api-reference/currencies/get-currencies.md): Get a list of all available tokens, or filter by network, symbol, or id.
+- [Get conversion routes for a specific currency](https://docs.request.network/api-reference/currencies/get-conversion-routes-for-a-specific-currency.md): Get a list of currency objects that can be converted to from the specified currency. Optionally filter by network.
+- [Create compliance data for a user](https://docs.request.network/api-reference/payer/create-compliance-data-for-a-user.md): Checks compliance status and returns necessary URLs for completing compliance.
+- [Get compliance status for a user](https://docs.request.network/api-reference/payer/get-compliance-status-for-a-user.md): Retrieves the comprehensive compliance status for a specific user, including KYC and agreement status.
+- [Create payment details](https://docs.request.network/api-reference/payer/create-payment-details.md): Create payment details for a user
+- [Get payment details for a user](https://docs.request.network/api-reference/payer/get-payment-details-for-a-user.md): Retrieves the registered bank account details for a user. Optionally filter by payment details ID.
+- [Update agreement status](https://docs.request.network/api-reference/payer/update-agreement-status.md): Update the agreement completion status for a user.
+- [Search payments with advanced filtering](https://docs.request.network/api-reference/v2payments/search-payments-with-advanced-filtering.md): Search payments by transaction hash, wallet address, payment reference, request ID, or merchant reference. Supports filtering by payment type, currencies, date ranges, and pagination.
+- [Secure Payments API Reference](https://docs.request.network/api-reference/secure-payments.md): Generate secure payment URLs, retrieve payment metadata, and get executable calldata.
+- [Webhooks](https://docs.request.network/api-reference/webhooks.md): Complete webhook implementation guide with event types, security, and retry configuration
+
+## Resources
+
+- [Supported Chains and Currencies](https://docs.request.network/resources/supported-chains-and-currencies.md): Supported chains and currency coverage across Request Network API payment types
+- [Lifecycle of a Request](https://docs.request.network/resources/lifecycle-of-a-request.md): The typical lifecycle of a request
+- [Request Network Token List](https://docs.request.network/resources/token-list.md): Curated list of tokens supported by Request Network products, in a standardized format with address, symbol, name, and decimals.
+- [Dashboard](https://docs.request.network/tools/dashboard.md): dashboard.request.network — sign in with your wallet to manage payment destinations, Client IDs, incoming payment requests, and outgoing payouts.
+- [Secure Payment](https://docs.request.network/tools/secure-payments.md): pay.request.network — the hosted payment link app payers open to settle a Request Network payment. Defense-in-depth, multi-chain, EVM + Tron.
+
+## OpenAPI Specs
+
+- [openapi.v2](https://docs.request.network/api-reference/openapi.v2.json): Machine-readable OpenAPI specification for the Request Network v2 API.
+
+## Optional
+
+- [FAQ](https://docs.request.network/faq.md): Frequently Asked Questions and Common Misconceptions
+- [Glossary](https://docs.request.network/glossary.md): Definitions of Request Network terms and concepts.
+- [Hypernative KYT Policy](https://docs.request.network/use-cases/hypernative-standard-screening-policy.md): The default Hypernative wallet-screening policy used for Request Network KYT checks.
